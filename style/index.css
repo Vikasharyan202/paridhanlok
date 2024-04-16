@@ -14,7 +14,7 @@ body{
 .header_top{
   display: flex;
   justify-content: space-between;
-  margin: 6px 0 10px;
+  margin-bottom: 10px;
   padding: 0 10%;
   background: rgb(137, 137, 246);
   width: 100%;
@@ -115,4 +115,52 @@ body{
   text-decoration: none;
   color: rgb(65, 63, 63);
   font-weight: 600;
+}
+
+/* Header Slider */
+header{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-image: url(/images/slides/background.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.slider{
+  display: flex;
+  animation: slide 40s linear infinite;
+  margin-top: 30px;
+}
+.slide{
+  flex: 0 0 70%;
+}
+.slide img{
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+@keyframes slide {
+  0% {
+      transform: translateX(40%);
+  }
+  20% {
+      transform: translateX(-100%);
+  }
+  30% {
+      transform: translateX(-200%);
+  }
+  50% {
+      transform: translateX(-300%);
+  }
+  70% {
+      transform: translateX(-400%);
+  }
+  80% {
+      transform: translateX(-500%);
+  }
+  100% {
+      transform: translateX(-600%);
+  }
 }
